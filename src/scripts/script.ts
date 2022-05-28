@@ -6,7 +6,6 @@ let input: HTMLInputElement = createInput();
 let enter: HTMLElement = createButton();
 enter.addEventListener('click', () => addTask(input, enter));
 
-
 //creates the add btn
 function createButton(): HTMLElement {
     const button = document.createElement('button');
@@ -53,7 +52,6 @@ function onDlt(task: HTMLElement) {
         enter.addEventListener('click', () => addTask(input, enter));
     }
 }
-
 //creates the edit btn
 function createEditButton(task: HTMLElement): HTMLElement {
     const button = document.createElement('button');
@@ -62,7 +60,6 @@ function createEditButton(task: HTMLElement): HTMLElement {
     task.appendChild(button);
     return button;
 }
-
 //when edit clicked
 function onEdit(task: HTMLElement) {
     if (!editClicked) {
@@ -93,10 +90,6 @@ function onEdit(task: HTMLElement) {
 function isChecked(task:HTMLElement){
     task.classList.toggle('checked');
 }
-//add checked when V 
-
-
-
 //what happens when press on enter
 function addTask(field: HTMLInputElement, button: HTMLElement) {
     if (!outOfLine(field) && rowCounter <= 12) {
@@ -128,8 +121,6 @@ function addTask(field: HTMLInputElement, button: HTMLElement) {
         alert("yes yes keep diggin' \ni already thought about it");
         field.value = '';
     }
-
-
 }
 //check for a valied input
 function outOfLine(input: HTMLInputElement): boolean {
