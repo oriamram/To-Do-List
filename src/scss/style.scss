@@ -44,7 +44,7 @@ body {
         //noteBook title
         h1 {
             @include position(0, 0, 130px, 0, 0);
-            @include size(unset, 100px);
+            @include size(250px, 100px);
             @include font(60px, unset);
             text-decoration: underline 5px;
             position: absolute;
@@ -119,10 +119,7 @@ body {
         outline: none;
     }
 }
-
-
 #enter {
-
     background: rgba(88, 88, 88, 0.26);
     @include font(18px, 600);
     border: none;
@@ -135,3 +132,14 @@ body {
         font-size: 23px;
     }
 }
+
+#dltAll{
+    position: absolute;
+    @include position(10px,unset ,unset ,15px ,unset );
+    @include size(50px,50px );
+    border-radius: 50%;
+    border: none;
+    background: rgba(21, 0, 255, 0.671);
+    @include font(30px,unset);
+}
+

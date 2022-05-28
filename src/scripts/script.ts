@@ -1,4 +1,7 @@
 const noteBook = document.getElementById('noteBook') as HTMLElement;
+const DltAll= document.getElementById('dltAll') as HTMLElement;
+const CheckAll= document.getElementById('checkAll') as HTMLElement;
+DltAll.addEventListener('click',()=>dltAll());
 let editClicked: boolean = false;
 let editor: HTMLInputElement;
 if (localStorage.getItem('ids') === null) {
@@ -21,11 +24,7 @@ for (let task in localStorage) {
         createEditButton(checkTask).addEventListener('click', () => onEdit(checkTask));
         createDltButton(checkTask).addEventListener('click', () => onDlt(checkTask));
     }
-    if(localStorage.length<=12){
-        
-    }
 }
-
 let input: HTMLInputElement = createInput();
 let enter: HTMLElement = createButton();
 enter.addEventListener('click', () => addTask(input, enter));
@@ -33,6 +32,7 @@ if(localStorage.length===13){
     input.remove();
     enter.remove();
 }
+
 
 //creates the add btn
 function createButton(): HTMLElement {
@@ -74,8 +74,7 @@ function onDlt(task: HTMLElement) {
         task.remove();
         localStorage.removeItem(task.id);
         console.log(localStorage);
-        if (localStorage.length <= 11 && noteBook.querySelector('#taskBox') === null) {
-
+        if (localStorage.length <= 12 && noteBook.querySelector('#taskBox') === null) {
             input = createInput();
             enter = createButton();
             enter.addEventListener('click', () => addTask(input, enter));
@@ -123,7 +122,8 @@ function onEdit(task: HTMLElement) {
     }
 
 }
-function isChecked(task: HTMLElement) {
+//check the task
+function isChecked(task: any) {
     task.classList.toggle('checked');
 }
 //when press on enter
@@ -168,4 +168,14 @@ function outOfLine(input: HTMLInputElement): boolean {
         return true;
     }
     else return false;
+}
+//delete all tasks
+function dltAll(){
+    for (let task in localStorage) {
+        if (!isNaN(+task)) {
+            noteBook.firstChild?.remove();
+        }
+    }
+    localStorage.clear();
+    location.reload();
 }
