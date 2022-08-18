@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+body {
+  background: #d3c4a5;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  width: 100vh;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+.container img {
+  position: relative;
+  width: 700px;
+  height: 950px;
+  top: unset;
+  bottom: unset;
+  left: 160px;
+  right: unset;
+  margin: 0;
+}
+.container #noteBook {
+  position: absolute;
+  width: 470px;
+  height: 790px;
+  top: 80px;
+  bottom: unset;
+  left: 280px;
+  right: unset;
+  margin: 0;
+  z-index: 1;
+}
+.container #noteBook h1 {
+  top: 0;
+  bottom: 0;
+  left: 130px;
+  right: 0;
+  margin: 0;
+  width: 250px;
+  height: 100px;
+  font-size: 60px;
+  font-family: "Patrick Hand";
+  font-weight: unset;
+  text-decoration: underline 5px;
+  position: absolute;
+}
+.container #noteBook .task {
+  position: relative;
+  top: 80px;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+  margin: 0px;
+  font-size: 20px;
+  font-family: "Patrick Hand";
+  font-weight: 0;
+  margin-top: 35.6px;
+}
+.container #noteBook .task h3 {
+  display: inline;
+  font-weight: 200;
+}
+.container #noteBook div {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 20px;
+}
+.container #noteBook div .dlt {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: unset;
+  bottom: 0;
+  left: unset;
+  right: 0;
+  margin: 0;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  background: rgba(87, 0, 0, 0.212);
+  font-size: 10px;
+  font-family: "Patrick Hand";
+  font-weight: 500;
+}
+.container #noteBook div .edit {
+  border: none;
+  position: absolute;
+  top: unset;
+  bottom: 0;
+  left: unset;
+  right: 30px;
+  margin: 0;
+  background: rgba(209, 5, 5, 0);
+  font-size: 15px;
+  font-family: "Patrick Hand";
+  font-weight: unset;
+}
+.container #noteBook div #editor {
+  background: rgba(197, 167, 167, 0.37);
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  width: 380px;
+  height: 25px;
+  font-size: 25px;
+  font-family: "Patrick Hand";
+  font-weight: 500;
+  top: unset;
+  bottom: 3px;
+  left: unset;
+  right: unset;
+  margin: unset;
+  z-index: 1;
+}
+.container #noteBook div #editor:focus {
+  outline: none;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+
+#taskBox {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-radius: 8px;
+  position: relative;
+  width: 400px;
+  height: 33px;
+  top: 108px;
+  bottom: 0;
+  left: 25px;
+  right: 0;
+  margin: 0;
+  font-size: 25px;
+  font-family: "Patrick Hand";
+  font-weight: 600;
+  z-index: 1;
+}
+#taskBox:focus {
+  outline: none;
+}
+
+#enter {
+  background: rgba(88, 88, 88, 0.26);
+  font-size: 18px;
+  font-family: "Patrick Hand";
+  font-weight: 600;
+  border: none;
+  border-radius: 100%;
+  position: relative;
+  width: 40px;
+  height: 28px;
+  top: 104px;
+  bottom: 0;
+  left: 30px;
+  right: 0;
+  margin: 0;
+  z-index: 1;
+}
+#enter:active {
+  font-size: 23px;
+}
+
+#dltAll {
+  position: absolute;
+  top: 10px;
+  bottom: unset;
+  left: unset;
+  right: 15px;
+  margin: unset;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(21, 0, 255, 0.671);
+  font-size: 30px;
+  font-family: "Patrick Hand";
+  font-weight: unset;
+}
